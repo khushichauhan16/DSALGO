@@ -40,12 +40,16 @@ void pushItemAtEnd(int newdata)
     new_node->data=newdata;
     new_node->next=NULL;
     if(head==NULL)
+    {
     head=new_node;
+    return;
+    }
     while(temp->next!=NULL)
     {
         temp=temp->next;
     }
     temp->next=new_node;
+    return;
 }
 void popItemfromStart()
 {
